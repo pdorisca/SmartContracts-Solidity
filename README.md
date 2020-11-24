@@ -84,7 +84,13 @@ You will need to fill in the constructor parameters with your designated `employ
 
 Test the `deposit` function by sending various values. Keep an eye on the `employee` balances as you send different amounts of Ether to the contract and ensure the logic is executing properly.
 
-![Remix Testing](Images/remix-test.png)
+![Remix Deploy](Images/AssociatedProfitSplitter.png)
+
+
+![Remix Transaction](Images/Transaction.png)
+
+
+![Remix Ganache](Images/Level1.png)
 
 ### Level Two: The `TieredProfitSplitter` Contract
 
@@ -119,6 +125,12 @@ Using the contract file, within the `deposit` function, perform the following:
 * Send the remainder to the employee with the highest percentage by subtracting `total` from `msg.value`, and sending that to an employee.
 
 * Deploy and test the contract functionality by depositing various Ether values (greater than 100 wei).
+
+
+![Remix Deploy2](Images/TieredProfitSplitter.png)
+
+
+![Remix Ganache2](Images/Level2.png)
 
   * The provided `balance` function can be used as a test to see if the logic you have in the `deposit` function is valid. Since all of the Ether should be transferred to employees, this function should always return `0`, since the contract should never store Ether itself.
 
@@ -170,6 +182,8 @@ Using the starter code, perform the following:
 
 * Deploy and test your contract locally.
 
+![Remix Deploy3](Images/DeferredEquityPlan.png)
+
   * For this contract, test the timelock functionality by adding a new variable called `uint fakenow = now;` as the first line of the contract, then replace every other instance of `now` with `fakenow`. Utilize the following `fastforward` function to manipulate `fakenow` during testing.
 
   * Add this function to "fast forward" time by 100 days when the contract is deployed (requires setting up `fakenow`):
@@ -190,4 +204,4 @@ Once you feel comfortable with your contracts, point MetaMask to the Kovan or Ro
 
 After switching MetaMask to Kovan, deploy the contracts as before and copy/keep a note of their deployed addresses. The transactions will also be in your MetaMask history, and on the blockchain permanently to explore later.
 
-![Remix Deploy](Images/remix-deploy.png)
+![Remix Deploy4](Images/KovanTestnet.png)
